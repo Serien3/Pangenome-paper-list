@@ -1,0 +1,9 @@
+.venv/
+.venv_win/
+.papermarrow/
+PaperMarrow/
+*.pdf
+
+images/
+temp/
+full.md
