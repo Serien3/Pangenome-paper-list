@@ -4,12 +4,15 @@
 
 ### 🔥 Updates
 
+- 2026-10 接下来主要关注泛基因组构建,以及泛基因组数据结构的相关工作
+
 ## Directory
 
 ⭐ 表示文章较多；🔥表示当前主要关注并更新
 
-- [Pangenome construction]
-
+- ⭐🔥[Pangenome construction](#pangenome-construction)
+- [Annotating pangenomes](#annotating-pangenomes)
+- [Structural Variant callers](#structural-variant-callers)
 
 
 # Pangenome
@@ -20,13 +23,11 @@
 
 ## Annotating pangenomes
 
-## Long read alignment to a pangenome graph
+## read alignment to a pangenome graph
 
 ## Structural Variant callers
 
 ## Structural Variant genotypers
 
-## Pangenome viewers -interactive
 
-## Pangenome viewers -static
 
