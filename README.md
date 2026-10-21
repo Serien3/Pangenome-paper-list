@@ -13,7 +13,10 @@
 - ⭐🔥[Pangenome construction](#pangenome-construction)
 - [Annotating pangenomes](#annotating-pangenomes)
 - [Pangenome data structures](#pangenome-data-structures)
+- [Sequence-to-graph mapping algorithms](#sequence-to-graph-mapping-algorithms)
+  - [特异性/选择性计算思路](#特异性选择性计算思路)
 - [Structural Variant callers](#structural-variant-callers)
+- [Structural Variant genotypers](#structural-variant-genotypers)
 
 
 # Pangenome
@@ -30,7 +33,11 @@
 
 1. [bioRxiv]**Billi: Accurate and Scalable Bubble Detection in Pangenome Graphs**[[paper]](https://www.biorxiv.org/content/10.1101/2025.11.21.689636v2) [[Github]](https://github.com/at-cg/billi)[[reading-note]](paper-list/Billi%20%5BLGBKWWZ6%5D/reading-note.md)  Billi 将允许环的变异区域分为双入口穿行的 panbubble 与单入口反向返回的 hairpin，通过限制 panbubble 内部的 hairpin 入口保证严格嵌套；把双向图转成辅助无向图，利用桥、环等价类和 DFS 祖先关系筛选候选，再回到双色边图验证方向可达性与最小性，给出精确枚举算法及只检查首个合适后继的可扩展启发式，在保留倒位及其内部小变异层级的同时扩展到 HPRC 大图，但启发式的完整性仅有已完成精确对照的测试支持。
 
-## read alignment to a pangenome graph
+## Sequence-to-graph mapping algorithms
+
+### 特异性/选择性计算思路
+
+1. [bioRxiv]**DCSMAP: A Hybrid Linear-Pangenome Framework for Accurate and Efficient Read Alignment**[[paper]](https://doi.org/10.64898/2026.10.18.759502) [[Github]](https://github.com/BGIResearch/dcsmap)[[reading-note]](paper-list/DCSMAP%20-%20A%20Hybrid%20Linear-Pangenome%20Framework%20for%20Accurate%20and%20Efficient%20Read%20Alignment%20%5BQWHLHF2Y%5D/reading-note.md)  线性参考比对快但有参考偏倚，全量图比对能缓解偏倚却计算昂贵。DCSMAP 利用线性比对特征，通过 XGBoost 筛选约 15% 的 read pairs 送入个性化泛基因组重比对，并通过局部 indel 重比对整合结果，将昂贵计算集中于可疑 reads，兼顾准确性与效率。
 
 ## Structural Variant callers
 
